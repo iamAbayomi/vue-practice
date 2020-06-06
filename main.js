@@ -2,10 +2,11 @@ var app = new Vue( {
     el: '#app',
     data: {
         product: 'Socks',
-        image : "image/Blue Socks.jpg",
+        brand : "Vue Mastery",
+        image : "image/blue-socks.jpg",
         altText: "Image of Socks",
         inStock : true,
-        inventory: 5,
+        inventory: 0,
         details : ["80% cotton", "20% polyester", "Gender-neutral"],
         variants: [
             {
@@ -30,7 +31,13 @@ var app = new Vue( {
         updateProduct(variantImage){
             this.image = variantImage
         }
+    },
+    computed: {
+        title() {
+            return this.brand + ' ' + this.product
+        }
     }
-}
+    
+    }
 
 )
