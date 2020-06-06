@@ -1,8 +1,12 @@
 var app = new Vue( {
     el: '#app',
     data: {
-        product: 'Socks + GotHAm',
-        description: 'What is the stuff goinb on'
+        product: 'Socks',
+        image : "image/socks.jpg",
+        inStock : true,
+        inventory: 5 
+       //, image : "image/blue-socks.jpg"
     }
 }
+
 )
